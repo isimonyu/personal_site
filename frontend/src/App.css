@@ -1,0 +1,377 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* @import 'node_modules/modern-normalize/modern-normalize.css';  npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize */         
+  /* @import "component1.css";   Component-specific stylesheets, if any.   */
+  /* @import url(//fonts.googleapis.com/css?family=Font+Name); Add fonts from a hosted services like Google Fonts.   */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;900&family=Roboto:wght@300;900&display=swap');
+  @import "~react-image-gallery/styles/css/image-gallery.css";
+
+  /*   ----- Variables  -----  */
+  :root {
+      --lazyOrange: #EB9E78;
+      --sandTan: #E9D7C9;
+      --sandTanTP: #E9D7C990;
+      --dirtBrown: #493C34;
+      --dirtBrownTP: #493C3489;
+      --skyBlue: #A5B6D4;
+      --skyBlueTP: #A5B6D450;
+      --coolGray: #E7DFD2;
+      --coolGrayTP: #E7DFD295;
+    }
+    
+    /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+    body {       /* Can alternatively define in html {}. */
+      background-image: url(images/torrey-pines-beach-sunset.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: var(--dirtBrown);
+      font-family:'Roboto', sans-serif;
+      line-height: 150%;
+      margin: 0 5%;
+      padding: 0;
+      max-width: 100%;
+    }
+    
+    /*  ----- Page layout blocks -----  */
+    header {
+      color: var(--coolGray);
+      background-color: var(--dirtBrown);
+      text-align: center;
+      max-height: 12vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: var(--lazyOrange) solid 2px;
+      margin: 0;
+    }
+    
+    header img {
+      max-width: 5vw;
+      height: auto;
+      padding: 5%;
+  
+    }
+    main {
+      background-color: var(--sandTanTP);
+      padding: 2%;
+      margin: 0;
+    }
+    section {
+      background-color: var(--coolGrayTP);
+      padding: 2%;
+    }
+    /* article {}
+      #topic1 {}
+      #topic2 {}
+    div {}
+    aside {} */
+    footer {
+      color: var(--coolGray);
+      padding: 2%;
+      margin: 2%;
+    }
+    
+    /* ----- Anchors ----- Text links */
+    /* a {}
+    a:link {}
+    a:hover {}
+    a:active {}
+    a:visited {} */
+    
+    /*  ----- Navigation ----- Override text links for navigation only.  */
+    nav {
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      text-decoration:none;
+      margin: 1em;
+      padding: 0.5em 1em;
+      background-color: var(--dirtBrown);
+      color: var(--coolGray);
+      border-right: var(--coolGray) solid 1px;
+    }
+    nav a:hover {
+      background-color: var(--lazyOrange);
+      color: var(--dirtBrown);
+    }
+    .local {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: baseline;
+    }
+    .local a{
+      background-color: var(--lazyOrange);
+      color: var(--dirtBrown);
+      border-right: var(--skyBlue) solid 1px;
+    }
+    .local a:hover{
+      background-color: var(--skyBlue);
+      color: var(--dirtBrown);
+    }
+    /*  -----  Typography  ----- */
+    /* p {}
+    br {}
+    ol, ul, dl {}
+    li {}
+    dt {}
+    dd {} */
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Inter', sans-serif;
+    } 
+    /* h1 {}
+    h2 {}
+    h3 {}
+    h4 {}
+    h5 {}
+    h6 {} */
+    
+    /* abbr {}
+    acronym {}
+    address {}
+    blockquote {}
+      q {}
+      cite {}
+    em {}
+    hr {}
+    mark {}
+    s {}
+    span {}
+    strong {}
+    sub {}
+    sup {}
+    time {} */
+    
+    /*  ----- Coding or instructional typography ----- */
+    /* pre {}
+    code {}
+    kbd {}
+    samp {}
+    var {}
+    del {} 
+    ins {} */
+    
+    /*  ----- Table ----- */
+    table {
+      border-collapse: collapse;
+      color: var(--dirtBrown);
+      padding: 5%;
+      width: 99%;
+    }
+    caption {
+      background-color: var(--lazyOrange);
+      color: var(--dirtBrown);
+      border: 1px solid var(--dirtBrown);
+    }
+    thead {}
+    tbody {
+  
+    }
+    tfoot {}
+    tr td {
+      border-bottom: 1px solid var(--lazyOrange);
+      padding: 2%;
+      align-items: center;
+      text-align: center;
+    }
+    tbody tr:nth-child(odd) {
+        background-color: var(--coolGray);
+      }
+    tr th {
+      border-bottom: 1px solid var(--dirtBrown);
+      padding: 5%;
+    }
+      th:nth-child(7) {
+        padding: 10px;
+      }
+    td {}
+      td:nth-child(1) {
+        width: 20vw;
+      }
+    td label input[type="radio"] {
+      margin-left: 0;
+      width: fit-content;
+      text-align: left;
+    }
+    .quantity {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .iconSpacing {
+      margin: 0 10px;
+
+    }
+    .alignRight {
+      text-align: right;
+    }
+  
+    /* colgroup {}
+    data {}
+    datalist {}
+     */
+    
+    /*  ----- Form ----- */
+    form {
+      display: flex;
+      font-family:'Inter', sans-serif;
+      color: var(--dirtBrown);
+      justify-content: center;
+  
+    }
+    fieldset {
+      margin: 0 2% 5% 2%;
+      padding: 2%;
+      border-color: var(--lazyOrange);
+      background-color: var(--sandTanTP);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+      legend {
+        font-weight: bold;
+        text-align: center;
+        padding: 5%;
+      }
+    label {
+      display: block;
+      margin-top: 2%;
+    }
+    button {
+      width: 4rem;
+      border-radius: 5px;
+      background-color: var(--dirtBrown);
+      color: var(--coolGray);
+      margin: 0 5%;
+    }
+    button:hover{
+      cursor: pointer;
+    }
+    button[type="reset"]{
+      background-color: var(--coolGray);
+      color: var(--dirtBrown);
+    }
+    fieldset #buttons{
+      display: flex;
+      justify-content: space-evenly;
+      padding: 5px;
+    }
+    input {
+      width: 50%;
+      border-radius: 5px;
+      background-color:  var(--coolGray);
+      padding: 2%;
+  
+    }
+    input:focus, textarea:focus{
+      background-color: var(--skyBlueTP);
+    }
+    input:valid, textarea:required:valid{
+      border-color: green;
+    }
+    input:required:invalid, textarea:required:invalid{
+      border-color: var(--lazyOrange);
+    }
+    label input[type="radio"], label input[type="checkbox"] {
+      width:10px;
+      margin-left: 5%;
+      margin-right: .5rem;
+      display:inline!important; 
+      }
+    .labelArea {
+      margin-right: 2%;
+    }
+    select {
+      color: var(--dirtBrown);
+      background-color:  var(--coolGray);
+    
+    }
+    textarea {
+      background-color:  var(--coolGray);
+      width: 100%;
+      margin: 0 auto;
+    }
+      /* optgroup {}
+      option {}
+    output {}
+    meter {}
+    progress {} */
+    *::placeholder{
+      color: var(--dirtBrownTP);
+    }
+    .req {
+      color: var(--lazyOrange)
+    }
+  
+    i {font-size:140%;}
+    /* ----- Media ----- */
+    /* figure {}
+      figcaption {}
+      figure img {} */
+    /* svg {}
+    picture {}
+      source {}
+    iframe {}
+    video {}
+    audio {}
+    embed {}
+    object {} */
+    
+    /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+    .gallery {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+    .gallery figure{
+      background-color: var(--coolGrayTP);
+      width: 360px;
+      margin:.75%;
+      padding:0;
+      border: var(--lazyOrange) 1px solid;
+    }
+    .gallery img{
+      width: 100%;
+    }
+    .gallery figcaption {
+      display:block;
+      padding:3px;
+    }
+    .image-gallery-description { bottom:0px!important; } 
+    .image-gallery-slide { margin-bottom:80px!important; }
+    /* .floatright {}
+    .floatleft {}
+    .center-middle {}
+    
+    .ten {}
+    .twenty {}
+    .thirty {}
+    .forty {}
+    .fifty {}
+    .sixty {}
+    .seventy {}
+    .eighty {}
+    
+    .radius {}
+    .circle {}
+    .boxshadow {}
+    .tshadow {} 
+    .gradient {}
+    .shape {} */
+    
+    @keyframes App-logo {}
+    
+    /*   ===== TABLET  media query overrides mobile styles ===== */
+    @media all and (min-width: 600px) {}
+    
+    /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+    @media all and (min-width: 1080px) {}
+    
+    /*   ===== PRINT  media query overrides previous styles =====  */
+    @media print {}
+    

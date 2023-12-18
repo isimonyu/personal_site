@@ -1,0 +1,94 @@
+### CREATE five documents.
+POST http://localhost:3000/shoes HTTP/1.1
+content-type: application/json
+
+{
+    "name": "White Cement Jordan 4s",
+    "brand": "Nike",
+    "year": 2018,
+    "quantity": 1,
+    "date": "2018-05-11"
+}
+
+
+### CREATE 2
+POST http://localhost:3000/shoes HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Yeezy 350 Zebra",
+    "brand": "Adidas",
+    "year": 2016,
+    "quantity": 1,
+    "date": "2016-06-18"
+}
+
+### CREATE 3
+POST http://localhost:3000/shoes HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Yeezy 500 Blush",
+    "brand": "Adidas",
+    "year": 2018,
+    "quantity": 1,
+    "date": "2018-08-20"
+}
+
+### CREATE 4
+POST http://localhost:3000/shoes HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Air Max 95",
+    "brand": "Nike",
+    "year": 2023,
+    "quantity": 1,
+    "date": "2023-04-20"
+}
+
+### CREATE 5
+POST http://localhost:3000/shoes HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Space Jam Jordan 11s",
+    "brand": "Nike",
+    "year": 2018,
+    "quantity": 1,
+    "date": "2018-12-16"
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/shoes HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/shoes/6568f377616cca9cec8fb6d6 HTTP/1.1
+
+
+### UPDATE one document's year, by ID.
+### Replace the ID in the following request with one that exists
+### and update the year:
+PUT http://localhost:3000/shoes/6568f377616cca9cec8fb6d6 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "White Cement Jordan 4s",
+    "brand": "Nike",
+    "year": 2019,
+    "quantity": 2,
+    "date": "2018-05-11"
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/shoes/6568f38f616cca9cec8fb6de HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/shoes HTTP/1.1
+
